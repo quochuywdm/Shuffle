@@ -215,7 +215,7 @@ open class SwipeCardStack: UIView, SwipeCardDelegate, UIGestureRecognizerDelegat
       }
     }
 
-    delegate?.cardStack?(self, didSwipeCardAt: swipedIndex, with: direction)
+      delegate?.cardStack?(self, didSwipeCardAt: swipedIndex, swipeCard: topCard, with: direction)
 
     if stateManager.remainingIndices.isEmpty {
       delegate?.didSwipeAllCards?(self)
