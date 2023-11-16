@@ -27,7 +27,7 @@ import UIKit
 open class SwipeCardStack: UIView, SwipeCardDelegate, UIGestureRecognizerDelegate {
 
   /// A internal structure for a `SwipeCard` and it's corresponding index in the card stack's `dataSource`.
-  struct Card {
+  public struct Card {
     var index: Int
     var card: SwipeCard
   }
@@ -68,9 +68,9 @@ open class SwipeCardStack: UIView, SwipeCardDelegate, UIGestureRecognizerDelegat
   /// An ordered array containing all pairs of currently visible cards.
   ///
   /// The `Card` at the first position is the topmost `SwipeCard` in the view hierarchy.
-  var visibleCards: [Card] = []
+  public var visibleCards: [Card] = []
 
-  var topCard: SwipeCard? {
+  public var topCard: SwipeCard? {
     return visibleCards.first?.card
   }
 
