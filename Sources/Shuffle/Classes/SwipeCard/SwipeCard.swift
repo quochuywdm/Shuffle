@@ -139,7 +139,7 @@ open class SwipeCard: SwipeView {
     return 0
   }
 
-  func swipeOverlayPercentage(forDirection direction: SwipeDirection) -> CGFloat {
+  public func swipeOverlayPercentage(forDirection direction: SwipeDirection) -> CGFloat {
     if direction != activeDirection() { return 0 }
     let totalPercentage = swipeDirections.reduce(0) { sum, direction in
       return sum + dragPercentage(on: direction)
