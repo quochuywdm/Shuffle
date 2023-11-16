@@ -453,7 +453,7 @@ open class SwipeCardStack: UIView, SwipeCardDelegate, UIGestureRecognizerDelegat
   }
 
   func cardDidContinueSwipe(_ card: SwipeCard) {
-      self.delegate.cardStack(self, swipeCard: card)
+      self.delegate?.cardStackDidContinueSwipeCard?(self, swipeCard: card)
     for (position, backgroundCard) in backgroundCards.enumerated() {
       backgroundCard.transform = backgroundCardDragTransform(topCard: card, currentPosition: position + 1)
     }
